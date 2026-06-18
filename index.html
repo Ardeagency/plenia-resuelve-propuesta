@@ -218,6 +218,16 @@ section{position:relative;z-index:2}
 /* verbal question cards */
 .vq{font-family:var(--sans);font-weight:600;font-size:19px;color:var(--cream);line-height:1.32;min-height:78px}
 
+/* video showcase */
+.videowrap{position:relative;border-radius:12px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.55);aspect-ratio:16/9;background:#000;margin-top:8px}
+.videowrap video{width:100%;height:100%;display:block;object-fit:cover}
+.videowrap.playing .vplay{opacity:0;pointer-events:none}
+.vplay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:opacity .4s;background:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.35))}
+.vplay .pbtn{width:84px;height:84px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(238,58,35,.5);transition:transform .3s}
+.vplay:hover .pbtn{transform:scale(1.08)}
+.vplay .pbtn::after{content:"";display:block;width:0;height:0;border-left:24px solid #fff;border-top:15px solid transparent;border-bottom:15px solid transparent;margin-left:6px}
+.vcap{text-align:center;margin-top:18px;font-size:13px;color:var(--muted-d);letter-spacing:.04em}
+
 /* claims por ocasión */
 .claimgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}
 .claimcard{border:1px solid var(--line);border-radius:12px;padding:26px 22px;background:#fff;transition:transform .3s,box-shadow .3s}
@@ -366,11 +376,30 @@ section{position:relative;z-index:2}
   </div>
 </section>
 
+<!-- VIDEO MANIFIESTO -->
+<section class="ink-block block">
+  <div class="wrap">
+    <div class="section-head rev" style="text-align:center">
+      <div class="eyebrow" style="justify-content:center">05 · El concepto en movimiento</div>
+      <h2 style="color:#fff">Video <span class="red">manifiesto.</span></h2>
+      <p class="lede" style="color:var(--muted-d);margin-left:auto;margin-right:auto">La pieza ancla que da la cara por el spin-off: el territorio Plenia Resuelve, vivo y en movimiento.</p>
+    </div>
+    <div class="videowrap rev" id="vwrap">
+      <video id="vplenia" preload="none" poster="assets/video_poster.jpg" playsinline controls>
+        <source src="assets/plenia_resuelve.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+      <div class="vplay" id="vplay"><div class="pbtn"></div></div>
+    </div>
+    <p class="vcap rev">Ejemplo de pieza audiovisual · Plenia Resuelve · Ocasión Botana</p>
+  </div>
+</section>
+
 <!-- GALLERY -->
 <section class="cream block" style="padding-top:30px">
   <div class="wrap">
     <div class="section-head rev">
-      <div class="eyebrow">05 · Dirección de arte</div>
+      <div class="eyebrow">06 · Dirección de arte</div>
       <h2>Comida real. <span class="red">Mesa mexicana.</span></h2>
       <p class="lede">Fotografía cálida, cotidiana y con food appeal. El producto siempre presente, las ocasiones siempre reconocibles. Esta es la línea visual desarrollada para la marca.</p>
     </div>
@@ -389,7 +418,7 @@ section{position:relative;z-index:2}
 <section class="cream block" style="padding-top:30px">
   <div class="wrap">
     <div class="section-head rev">
-      <div class="eyebrow">06 · Alcance del lanzamiento</div>
+      <div class="eyebrow">07 · Alcance del lanzamiento</div>
       <h2>Lo que <span class="red">entregamos.</span></h2>
       <p class="lede">La campaña completa, restructurada: la plataforma creativa, 3 ocasiones de consumo listas para salir y waves mensuales de continuidad. Todo lo necesario para que Plenia Resuelve exista y se mantenga vivo en el mercado.</p>
     </div>
@@ -483,7 +512,7 @@ section{position:relative;z-index:2}
 <section class="invest block">
   <div class="wrap">
     <div class="section-head rev">
-      <div class="eyebrow">07 · Inversión</div>
+      <div class="eyebrow">08 · Inversión</div>
       <h2 style="color:#fff">Paquete de <span class="red">lanzamiento.</span></h2>
       <p class="lede" style="color:var(--muted-d)">La campaña completa en tres fases, restructurada de $44,260 a una inversión de entrada. Concepto, ocasiones y continuidad — todo dentro de presupuesto.</p>
     </div>
@@ -584,6 +613,17 @@ window.addEventListener('scroll',()=>{
   const sc=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100;
   document.getElementById('prog').style.width=sc+'%';
 },{passive:true});
+
+// video play overlay
+(function(){
+  const wrap=document.getElementById('vwrap'),v=document.getElementById('vplenia'),btn=document.getElementById('vplay');
+  if(v&&btn){
+    btn.addEventListener('click',()=>{v.play();});
+    v.addEventListener('play',()=>wrap.classList.add('playing'));
+    v.addEventListener('pause',()=>{if(!v.ended)wrap.classList.remove('playing');});
+    v.addEventListener('ended',()=>wrap.classList.remove('playing'));
+  }
+})();
 
 // reveal
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.14});
