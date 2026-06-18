@@ -1,0 +1,19 @@
+# Permitir crawlers de previsualización social (WhatsApp/Facebook/Twitter/LinkedIn/Telegram)
+User-agent: facebookexternalhit
+Allow: /
+User-agent: facebookexternalhit/1.1
+Allow: /
+User-agent: WhatsApp
+Allow: /
+User-agent: Twitterbot
+Allow: /
+User-agent: LinkedInBot
+Allow: /
+User-agent: TelegramBot
+Allow: /
+User-agent: Slackbot-LinkExpanding
+Allow: /
+
+# Buscadores: no indexar (la página igual lleva meta noindex)
+User-agent: *
+Disallow: /

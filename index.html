@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARDE × Plenia Resuelve · Propuesta de Lanzamiento</title>
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="description" content="Propuesta de lanzamiento — Plenia Resuelve · Spin-off Salchichas · Grupo LALA México. Por ARDE Agency.">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ardeagency.github.io/plenia-resuelve-propuesta/">
+<meta property="og:site_name" content="ARDE Agency">
+<meta property="og:title" content="ARDE × Plenia Resuelve — Propuesta de Lanzamiento">
+<meta property="og:description" content="Plenia Resuelve. Plataforma creativa + 3 ocasiones de consumo + waves mensuales. Spin-off Salchichas · Grupo LALA México.">
+<meta property="og:image" content="https://ardeagency.github.io/plenia-resuelve-propuesta/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ARDE × Plenia Resuelve — Propuesta de Lanzamiento">
+<meta name="twitter:description" content="Plenia Resuelve. Plataforma creativa + 3 ocasiones de consumo + waves mensuales.">
+<meta name="twitter:image" content="https://ardeagency.github.io/plenia-resuelve-propuesta/assets/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#f1ece3;
+  --cream-2:#e8e1d4;
+  --ink:#0e0d0b;
+  --ink-soft:#1a1916;
+  --red:#ee3a23;
+  --red-deep:#cf2d18;
+  --muted:#6c665d;
+  --muted-d:#9b9a96;
+  --line:rgba(14,13,11,.14);
+  --line-d:rgba(255,255,255,.14);
+  --sans:'Archivo',system-ui,sans-serif;
+  --body:'Inter',system-ui,sans-serif;
+  --display:'Anton',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--body);
+  background:var(--ink);
+  color:var(--cream);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--red);color:#fff}
+
+/* progress bar */
+.prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--red);z-index:200;transition:width .1s linear}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:150;display:flex;justify-content:space-between;align-items:center;
+  padding:18px 40px;mix-blend-mode:difference;pointer-events:none}
+.nav .brand{font-family:var(--sans);font-weight:800;font-size:13px;letter-spacing:.22em;color:#fff}
+.nav .tag{font-family:var(--sans);font-weight:500;font-size:10px;letter-spacing:.28em;color:#fff;opacity:.7;text-transform:uppercase}
+@media(max-width:640px){.nav{padding:14px 20px}.nav .tag{display:none}}
+
+/* ambient red glow */
+.glow{position:fixed;border-radius:50%;filter:blur(120px);opacity:.5;z-index:0;pointer-events:none}
+.glow.a{width:520px;height:520px;background:radial-gradient(circle,#ee3a2399,transparent 70%);top:-160px;right:-120px}
+.glow.b{width:600px;height:600px;background:radial-gradient(circle,#ee3a2366,transparent 70%);bottom:10%;left:-200px}
+
+section{position:relative;z-index:2}
+.wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+@media(max-width:640px){.wrap{padding:0 22px}}
+
+.eyebrow{font-family:var(--sans);font-weight:700;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--red);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--red);display:inline-block}
+
+/* ===== HERO ===== */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:120px 40px 60px;position:relative;overflow:hidden}
+.hero .wrap{padding:0}
+.hero-meta-top{font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted-d);margin-bottom:30px;opacity:0;animation:fade .8s .1s forwards}
+.hero h1{font-family:var(--sans);font-weight:900;line-height:.92;letter-spacing:-.02em;font-size:clamp(48px,9vw,128px);text-transform:uppercase}
+.hero h1 .l{display:inline-block;opacity:0;transform:translateY(40px);animation:drop .7s forwards}
+.hero h1 .red{color:var(--red)}
+.hero-sub{font-family:var(--body);font-weight:400;font-size:clamp(16px,2.1vw,22px);color:var(--cream);max-width:620px;margin-top:30px;line-height:1.5;opacity:0;animation:fade 1s 1.1s forwards}
+.hero-sub b{font-weight:700;color:#fff}
+.hero-row{display:flex;gap:38px;flex-wrap:wrap;margin-top:46px;opacity:0;animation:fade 1s 1.35s forwards}
+.hero-row .it .k{font-family:var(--sans);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted-d);margin-bottom:7px}
+.hero-row .it .v{font-family:var(--sans);font-weight:700;font-size:15px;color:var(--cream)}
+.scroll-cue{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);font-family:var(--sans);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted-d);opacity:0;animation:fade 1s 1.8s forwards;display:flex;flex-direction:column;align-items:center;gap:8px}
+.scroll-cue span{width:1px;height:34px;background:linear-gradient(var(--red),transparent);animation:cue 1.6s infinite}
+@keyframes cue{0%{opacity:0;transform:scaleY(.3)}50%{opacity:1}100%{opacity:0;transform:scaleY(1)}}
+@keyframes drop{to{opacity:1;transform:translateY(0)}}
+@keyframes fade{to{opacity:1}}
+
+/* marquee */
+.marquee{background:var(--red);color:#fff;overflow:hidden;white-space:nowrap;padding:14px 0;border-top:1px solid var(--red-deep)}
+.marquee .track{display:inline-block;animation:scroll 28s linear infinite;font-family:var(--sans);font-weight:800;font-size:15px;letter-spacing:.12em;text-transform:uppercase}
+.marquee .track span{margin:0 26px;opacity:.95}
+.marquee .track span.o{opacity:.55}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ===== CREAM block ===== */
+.cream{background:var(--cream);color:var(--ink)}
+.cream .eyebrow{color:var(--red)}
+.cream .muted{color:var(--muted)}
+.block{padding:120px 0}
+@media(max-width:640px){.block{padding:80px 0}}
+
+.section-head{margin-bottom:60px}
+.section-head h2{font-family:var(--sans);font-weight:900;line-height:.98;letter-spacing:-.02em;font-size:clamp(32px,5.4vw,68px);text-transform:uppercase;margin-top:20px}
+.section-head h2 .red{color:var(--red)}
+.lede{font-size:clamp(17px,2.2vw,21px);line-height:1.6;max-width:680px;margin-top:24px;color:var(--muted)}
+.lede b{color:var(--ink);font-weight:600}
+
+/* concept manifesto */
+.mani{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.mani p{font-size:clamp(16px,2vw,19px);line-height:1.62;color:var(--muted);margin-bottom:22px}
+.mani p b{color:var(--ink);font-weight:600}
+.mani .big{font-family:var(--sans);font-weight:900;text-transform:uppercase;line-height:1;font-size:clamp(34px,4.6vw,60px);color:var(--red);letter-spacing:-.01em}
+.mani .promise{margin-top:30px;border-top:2px solid var(--ink);padding-top:22px}
+.mani .promise .k{font-family:var(--sans);font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:6px}
+.mani .promise .v{font-family:var(--sans);font-weight:900;font-size:clamp(24px,3vw,34px);text-transform:uppercase;color:var(--ink)}
+@media(max-width:760px){.mani{grid-template-columns:1fr;gap:30px}}
+
+/* verbal system on dark */
+.verbal{background:var(--ink-soft)}
+.vgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:24px}
+.vcard{border-top:2px solid var(--red);padding-top:22px}
+.vcard .hay{font-family:var(--sans);font-weight:900;font-size:30px;color:var(--red);text-transform:uppercase;line-height:1}
+.vcard .l1{font-size:16px;color:var(--cream);margin-top:18px;font-weight:500}
+.vcard .l2{font-size:16px;color:var(--muted-d);margin-top:4px}
+.vcard .ya{font-family:var(--sans);font-weight:900;font-size:19px;color:var(--red);text-transform:uppercase;margin-top:22px;letter-spacing:.01em}
+.vnote{margin-top:40px;font-size:14px;color:var(--muted-d);max-width:560px}
+@media(max-width:760px){.vgrid{grid-template-columns:1fr 1fr;gap:18px}}
+@media(max-width:420px){.vgrid{grid-template-columns:1fr}}
+
+/* scope phases */
+.phase{border-top:1px solid var(--line);padding:42px 0;display:grid;grid-template-columns:140px 1fr 200px;gap:30px;align-items:start}
+.phase .pnum{font-family:var(--display);font-size:60px;color:var(--red);line-height:.8}
+.phase h3{font-family:var(--sans);font-weight:900;font-size:clamp(22px,2.6vw,30px);text-transform:uppercase;margin-bottom:8px;letter-spacing:-.01em}
+.phase .pdesc{color:var(--muted);font-size:15px;line-height:1.6;max-width:560px}
+.phase ul{list-style:none;margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:8px 26px}
+.phase ul li{font-size:14px;color:var(--ink);padding-left:18px;position:relative;line-height:1.45}
+.phase ul li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;background:var(--red);border-radius:50%}
+.phase .pprice{text-align:right}
+.phase .pprice .amt{font-family:var(--sans);font-weight:900;font-size:26px;color:var(--ink)}
+.phase .pprice .lbl{font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-top:4px}
+@media(max-width:860px){.phase{grid-template-columns:1fr;gap:14px}.phase .pnum{font-size:44px}.phase .pprice{text-align:left}.phase ul{grid-template-columns:1fr}}
+
+/* SKUs + occasions */
+.chips{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.chip{border:1px solid var(--line);border-radius:40px;padding:10px 22px;font-family:var(--sans);font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.04em}
+.chip .s{color:var(--red)}
+.occ{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:34px;background:var(--line)}
+.ocell{background:var(--cream);padding:26px 24px;min-height:120px}
+.ocell .on{font-family:var(--sans);font-weight:900;font-size:18px;text-transform:uppercase;color:var(--ink)}
+.ocell .ot{font-size:14px;color:var(--muted);margin-top:8px;line-height:1.45}
+.ocell .oy{font-family:var(--sans);font-weight:700;font-size:12px;color:var(--red);text-transform:uppercase;margin-top:12px;letter-spacing:.04em}
+@media(max-width:760px){.occ{grid-template-columns:1fr 1fr}}
+@media(max-width:440px){.occ{grid-template-columns:1fr}}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin-top:10px}
+.gal figure{overflow:hidden;border-radius:4px;position:relative}
+.gal img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.1s cubic-bezier(.2,.8,.2,1)}
+.gal figure:hover img{transform:scale(1.05)}
+.g1{grid-column:span 7;aspect-ratio:16/10}
+.g2{grid-column:span 5;aspect-ratio:16/10}
+.g3{grid-column:span 4;aspect-ratio:4/3}
+.g4{grid-column:span 4;aspect-ratio:4/3}
+.g5{grid-column:span 4;aspect-ratio:4/3}
+.g6{grid-column:span 12;aspect-ratio:24/9}
+.gcap{position:absolute;left:14px;bottom:12px;font-family:var(--sans);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+@media(max-width:760px){.g1,.g2,.g3,.g4,.g5,.g6{grid-column:span 12;aspect-ratio:16/9}}
+
+/* full-bleed band */
+.band{min-height:60vh;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center;position:relative}
+.band::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(14,13,11,.5),rgba(14,13,11,.74))}
+.band-txt{position:relative;z-index:2;max-width:780px;padding:70px 24px}
+.band-txt .eyebrow{justify-content:center;color:#fff}
+.band-txt .eyebrow::before{background:#fff}
+.band-txt h3{font-family:var(--sans);font-weight:900;text-transform:uppercase;font-size:clamp(34px,6.2vw,74px);line-height:.94;color:#fff;letter-spacing:-.02em;margin-top:18px}
+.band-txt h3 .red{color:var(--red)}
+.band-txt p{margin-top:20px;font-size:clamp(15px,2vw,19px);color:var(--cream);opacity:.92}
+
+/* investment */
+.invest{background:var(--ink)}
+.invest .eyebrow{color:var(--red)}
+.tbl{margin-top:40px;border-top:2px solid var(--red)}
+.trow{display:grid;grid-template-columns:1fr 150px;gap:20px;padding:24px 0;border-bottom:1px solid var(--line-d);align-items:baseline}
+.trow .tname{font-family:var(--sans);font-weight:700;font-size:17px;color:var(--cream)}
+.trow .tsub{font-size:13px;color:var(--muted-d);margin-top:5px;font-weight:400;font-family:var(--body)}
+.trow .tamt{font-family:var(--sans);font-weight:800;font-size:19px;color:var(--cream);text-align:right}
+.trow.sub .tname{color:var(--muted-d);font-weight:600;font-size:15px}
+.trow.sub .tamt{color:var(--muted-d);font-size:16px}
+.trow.courtesy .tname{color:var(--red);font-weight:700}
+.trow.courtesy .tamt{color:var(--red)}
+.ttotal{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;padding:34px 0 0;margin-top:10px}
+.ttotal .tl{font-family:var(--sans);font-weight:900;font-size:clamp(20px,3vw,30px);text-transform:uppercase;color:#fff}
+.ttotal .tr{font-family:var(--sans);font-weight:900;font-size:clamp(40px,8vw,76px);color:var(--red);line-height:.9;letter-spacing:-.02em}
+.ttotal .tr small{font-size:.4em;color:var(--cream);font-weight:700;vertical-align:super}
+.terms{display:flex;gap:40px;flex-wrap:wrap;margin-top:34px;padding-top:28px;border-top:1px solid var(--line-d)}
+.terms .it .k{font-family:var(--sans);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted-d);margin-bottom:6px}
+.terms .it .v{font-family:var(--sans);font-weight:700;font-size:15px;color:var(--cream)}
+.benefits{margin-top:30px;border:1px solid var(--red);border-radius:10px;padding:26px 30px;background:rgba(238,58,35,.05)}
+.ben-head{font-family:var(--sans);font-weight:800;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:18px}
+.ben-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 30px}
+.ben{font-size:14px;color:var(--cream);line-height:1.45;display:flex;gap:10px;align-items:flex-start}
+.ben span{color:var(--red);font-weight:700;font-size:16px;line-height:1.2}
+@media(max-width:640px){.ben-grid{grid-template-columns:1fr}}
+
+/* continuity future phase */
+.cont{margin-top:26px;border:1px dashed var(--line-d);border-radius:8px;padding:28px 30px;display:grid;grid-template-columns:1fr 170px;gap:20px;align-items:center}
+.cont .ctag{font-family:var(--sans);font-weight:700;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:8px}
+.cont h4{font-family:var(--sans);font-weight:800;font-size:18px;color:var(--cream);margin-bottom:6px}
+.cont p{font-size:13px;color:var(--muted-d);line-height:1.5;max-width:520px}
+.cont .camt{text-align:right;font-family:var(--sans);font-weight:800;font-size:16px;color:var(--muted-d)}
+.cont .camt small{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-d);margin-top:4px;font-weight:600}
+@media(max-width:640px){.cont{grid-template-columns:1fr}.cont .camt{text-align:left}}
+
+/* GO / close */
+.go{background:var(--red);color:#fff;text-align:center;padding:120px 40px}
+.go h2{font-family:var(--sans);font-weight:900;font-size:clamp(40px,9vw,110px);text-transform:uppercase;line-height:.9;letter-spacing:-.02em}
+.go h2 .ink{color:var(--ink)}
+.go p{font-size:clamp(16px,2vw,20px);max-width:560px;margin:26px auto 0;line-height:1.5;opacity:.95}
+.go .cta{margin-top:40px;display:inline-flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.go .btn{font-family:var(--sans);font-weight:700;font-size:14px;letter-spacing:.04em;text-transform:uppercase;background:var(--ink);color:#fff;padding:16px 34px;border-radius:40px;text-decoration:none;transition:transform .2s}
+.go .btn:hover{transform:translateY(-3px)}
+.go .btn.alt{background:transparent;border:2px solid rgba(255,255,255,.6)}
+
+/* footer */
+.foot{background:var(--ink);padding:50px 40px;text-align:center;border-top:1px solid var(--line-d)}
+.foot .logo{height:26px;filter:brightness(0) invert(1);opacity:.85;margin-bottom:18px}
+.foot .fl{font-family:var(--sans);font-weight:700;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted-d)}
+.foot .fc{font-size:12px;color:var(--muted);margin-top:10px;line-height:1.7}
+.foot .conf{margin-top:18px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);opacity:.7}
+
+/* reveal */
+.rev{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
+.rev.in{opacity:1;transform:none}
+.rev.d1{transition-delay:.08s}.rev.d2{transition-delay:.16s}.rev.d3{transition-delay:.24s}.rev.d4{transition-delay:.32s}
+@media(prefers-reduced-motion:reduce){.rev{opacity:1!important;transform:none!important}.hero h1 .l{opacity:1;transform:none;animation:none}}
+</style>
+</head>
+<body>
+<div class="prog" id="prog"></div>
+<div class="glow a"></div><div class="glow b"></div>
+
+<nav class="nav">
+  <div class="brand">ARDE × PLENIA</div>
+  <div class="tag">Propuesta de Lanzamiento · 2026</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-meta-top">Grupo LALA México · Spin-off Salchichas · Propuesta confidencial</div>
+    <h1 id="heroTitle"></h1>
+    <p class="hero-sub">Una plataforma creativa lista para producir. <b>Plenia Resuelve</b> entra al mercado con un sistema verbal propio, un Key Visual maestro y las ocasiones que viven en cada casa mexicana.</p>
+    <div class="hero-row">
+      <div class="it"><div class="k">Cliente</div><div class="v">Grupo LALA · México</div></div>
+      <div class="it"><div class="k">Marca</div><div class="v">Plenia — Salchichas</div></div>
+      <div class="it"><div class="k">Alcance</div><div class="v">Plataforma + 3 Ocasiones + Waves</div></div>
+      <div class="it"><div class="k">Fecha</div><div class="v">Junio 2026</div></div>
+    </div>
+  </div>
+  <div class="scroll-cue">Desliza<span></span></div>
+</section>
+
+<div class="marquee"><div class="track" id="mq"></div></div>
+
+<!-- CONCEPT -->
+<section class="cream block">
+  <div class="wrap">
+    <div class="section-head rev">
+      <div class="eyebrow">01 · El concepto</div>
+      <h2>Plenia <span class="red">resuelve.</span></h2>
+      <p class="lede">En México no siempre sabemos qué vamos a comer. Pero algo se nos ocurre: abrimos el refri, vemos qué quedó y resolvemos. <b>Plenia es ese "con qué".</b> La salchicha rica, práctica, con carne 100% que convierte cualquier momento en comida. Un solo concepto firma toda la comunicación: <b>Plenia Resuelve</b>.</p>
+    </div>
+    <div class="mani rev">
+      <div>
+        <p>Aquí una comida no necesita empezar con una receta. A veces empieza con hambre, con prisa, con visita, con un <b>"¿y si hacemos unas salchichas?"</b>. Y ahí cambia todo.</p>
+        <p>Cuando hay Plenia, hay desayuno, lunch, comida, cena y botana. Una salchicha rica, práctica, con carne 100% y mejores razones para elegirla.</p>
+      </div>
+      <div>
+        <div class="big">No había plan.<br>Pero había Plenia.<br>Y ya se armó.</div>
+        <div class="promise">
+          <div class="v">Plenia Resuelve.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VERBAL SYSTEM -->
+<section class="verbal block">
+  <div class="wrap">
+    <div class="section-head rev">
+      <div class="eyebrow">02 · Sistema verbal</div>
+      <h2>Una estructura. <span class="red">Infinitas piezas.</span></h2>
+      <p class="lede" style="color:var(--muted-d)">Una mecánica sencilla, repetitiva y reconocible. <b style="color:#fff">Plenia Resuelve</b> cierra siempre. Una sola estructura que escala a toda la campaña.</p>
+    </div>
+    <div class="vgrid">
+      <div class="vcard rev d1"><div class="hay">Hay</div><div class="l1">Hay hambre.</div><div class="l2">Hay Plenia.</div><div class="ya">Plenia resuelve.</div></div>
+      <div class="vcard rev d2"><div class="hay">Hay</div><div class="l1">Hay partido.</div><div class="l2">Hay Plenia.</div><div class="ya">Plenia resuelve.</div></div>
+      <div class="vcard rev d3"><div class="hay">Hay</div><div class="l1">Hay amigos.</div><div class="l2">Hay Plenia.</div><div class="ya">Plenia resuelve.</div></div>
+      <div class="vcard rev d4"><div class="hay">Hay</div><div class="l1">Hay 10 min y 4 con hambre.</div><div class="l2">Hay Plenia.</div><div class="ya">Plenia resuelve.</div></div>
+    </div>
+    <p class="vnote rev">El humor viene de reconocer verdades, no de contar chistes. Directa · descomplicada · con colmillo · remates cortos. <b style="color:var(--red)">El producto siempre antes que el chiste.</b></p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="cream block" style="padding-top:90px">
+  <div class="wrap">
+    <div class="section-head rev">
+      <div class="eyebrow">03 · Dirección de arte</div>
+      <h2>Comida real. <span class="red">Mesa mexicana.</span></h2>
+      <p class="lede">Fotografía cálida, cotidiana y con food appeal. El producto siempre presente, las ocasiones siempre reconocibles. Esta es la línea visual desarrollada para la marca.</p>
+    </div>
+    <div class="gal">
+      <figure class="g1 rev"><img src="assets/p_botana.jpg" alt="Plenia botana tostadas"><figcaption class="gcap">Botana · Tostadas</figcaption></figure>
+      <figure class="g2 rev d1"><img src="assets/p_cena.jpg" alt="Plenia cena cocina"><figcaption class="gcap">Cena · Cocina de diario</figcaption></figure>
+      <figure class="g3 rev"><img src="assets/p_desayuno.jpg" alt="Plenia desayuno"><figcaption class="gcap">Desayuno · En casa</figcaption></figure>
+      <figure class="g4 rev d1"><img src="assets/p_lunch.jpg" alt="Plenia lunch sartén"><figcaption class="gcap">Lunch · Sartén rápido</figcaption></figure>
+      <figure class="g5 rev d2"><img src="assets/p_snack.jpg" alt="Plenia snack antojo"><figcaption class="gcap">Snack · Antojo</figcaption></figure>
+      <figure class="g6 rev"><img src="assets/p_comida.jpg" alt="Plenia comida mesa compartida"><figcaption class="gcap">Comida · Mesa compartida</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- SCOPE -->
+<section class="cream block" style="padding-top:30px">
+  <div class="wrap">
+    <div class="section-head rev">
+      <div class="eyebrow">04 · Alcance del lanzamiento</div>
+      <h2>Lo que <span class="red">entregamos.</span></h2>
+      <p class="lede">La campaña completa, restructurada: la plataforma creativa, 3 ocasiones de consumo listas para salir y waves mensuales de continuidad. Todo lo necesario para que Plenia Resuelve exista y se mantenga vivo en el mercado.</p>
+    </div>
+
+    <div class="phase rev">
+      <div class="pnum">01</div>
+      <div>
+        <h3>Plataforma + Assets Maestros</h3>
+        <div class="pdesc">El cimiento del spin-off. Territorio, sistema verbal, clonación digital de los 4 SKUs y el Key Visual maestro que ordena toda la comunicación. Tarifa de lanzamiento.</div>
+        <ul>
+          <li>Plataforma creativa del spin-off (territorio + sistema verbal + lockup)</li>
+          <li>Clonación digital de 4 SKUs (Pavo · Viena · Ligero · Pro)</li>
+          <li>Key Visual maestro (4 SKUs × versiones)</li>
+          <li>Moodboard y dirección de arte de campaña</li>
+        </ul>
+      </div>
+      <div class="pprice"><div class="amt">$10,000</div><div class="lbl">USD</div></div>
+    </div>
+
+    <div class="phase rev">
+      <div class="pnum">02</div>
+      <div>
+        <h3>3 Ocasiones de Consumo</h3>
+        <div class="pdesc">El concepto baja a piezas tácticas. Tres ocasiones producidas — sugeridas: desayuno, lunch y cena, o las que el cliente elija. El sistema se extiende a las demás ocasiones en fases siguientes.</div>
+        <ul>
+          <li>3 ocasiones de consumo producidas</li>
+          <li>18 imágenes (6 por ocasión)</li>
+          <li>6 videos sociales (9:16 + 1:1)</li>
+          <li>Claims hero por ocasión y SKU</li>
+        </ul>
+      </div>
+      <div class="pprice"><div class="amt">$7,500</div><div class="lbl">USD</div></div>
+    </div>
+
+    <div class="phase rev">
+      <div class="pnum">03</div>
+      <div>
+        <h3>4 Waves Mensuales de Continuidad</h3>
+        <div class="pdesc">Para mantener viva la conversación de cada ocasión tras el lanzamiento. Una pauta de contenido recurrente, mes a mes. Flexible: se ajusta por número de meses según necesidad.</div>
+        <ul>
+          <li>4 waves mensuales de contenido</li>
+          <li>16 piezas (4 por wave)</li>
+          <li>4 videos sociales (1 por wave)</li>
+          <li>Rotación por ocasión y SKU líder</li>
+        </ul>
+      </div>
+      <div class="pprice"><div class="amt">$10,000</div><div class="lbl">USD</div></div>
+    </div>
+
+    <div class="phase rev">
+      <div class="pnum" style="color:var(--ink)">★</div>
+      <div>
+        <h3>Pieza Ancla · Video Manifiesto de Marca</h3>
+        <div class="pdesc">El sizzle de lanzamiento que da la cara por el spin-off: un video cinematográfico de marca (20s) que sintetiza el territorio Plenia Resuelve. La pieza que abre presentaciones, redes y punto de venta.</div>
+        <ul>
+          <li>1 video manifiesto cinematográfico (20s)</li>
+          <li>Versiones 16:9 + 9:16 + 1:1</li>
+          <li>Música y locución incluidas</li>
+          <li>La firma audiovisual del territorio</li>
+        </ul>
+      </div>
+      <div class="pprice"><div class="amt">$2,000</div><div class="lbl">USD</div></div>
+    </div>
+
+    <div class="chips rev" style="margin-top:50px">
+      <div class="chip"><span class="s">SKU</span> &nbsp;Pavo</div>
+      <div class="chip"><span class="s">SKU</span> &nbsp;Viena</div>
+      <div class="chip"><span class="s">SKU</span> &nbsp;Ligero</div>
+      <div class="chip"><span class="s">SKU</span> &nbsp;Pro</div>
+    </div>
+
+    <div class="occ rev">
+      <div class="ocell"><div class="on">Desayuno</div><div class="ot">Hay huevito. Hay Plenia.</div><div class="oy">Plenia resuelve.</div></div>
+      <div class="ocell"><div class="on">Lunch</div><div class="ot">Había diez minutos. Había Plenia Pro.</div><div class="oy">Plenia resuelve.</div></div>
+      <div class="ocell"><div class="on">Cena</div><div class="ot">Llegó la cena. Las ganas de cocinar no. Había Plenia.</div><div class="oy">Plenia resuelve.</div></div>
+    </div>
+    <p class="rev" style="margin-top:22px;font-size:13px;color:var(--muted)">Ocasiones sugeridas para el lanzamiento — el cliente puede elegir las 3 que prefiera. El sistema se extiende a Comida, Snack y Botana en las waves de continuidad.</p>
+  </div>
+</section>
+
+<!-- BAND -->
+<section class="band" style="background-image:url('assets/p_band.jpg')">
+  <div class="band-txt rev">
+    <div class="eyebrow">El sistema, en una frase</div>
+    <h3>Un solo concepto.<br><span class="red">Toda la mesa.</span></h3>
+    <p>3 ocasiones · 4 SKUs · piezas que viven en cada casa mexicana — firmadas por Plenia Resuelve.</p>
+  </div>
+</section>
+
+<!-- INVESTMENT -->
+<section class="invest block">
+  <div class="wrap">
+    <div class="section-head rev">
+      <div class="eyebrow">05 · Inversión</div>
+      <h2 style="color:#fff">Paquete de <span class="red">lanzamiento.</span></h2>
+      <p class="lede" style="color:var(--muted-d)">La campaña completa en tres fases, restructurada de $44,260 a una inversión de entrada. Concepto, ocasiones y continuidad — todo dentro de presupuesto.</p>
+    </div>
+
+    <div class="tbl rev">
+      <div class="trow">
+        <div><div class="tname">Fase 1 · Plataforma + Assets Maestros</div><div class="tsub">Territorio, sistema verbal, 4 SKUs clonados, KV maestro, moodboard · tarifa de lanzamiento</div></div>
+        <div class="tamt">$10,000</div>
+      </div>
+      <div class="trow">
+        <div><div class="tname">Fase 2 · 3 Ocasiones de Consumo</div><div class="tsub">18 imágenes + 6 videos (9:16 + 1:1) · claims por ocasión y SKU</div></div>
+        <div class="tamt">$7,500</div>
+      </div>
+      <div class="trow">
+        <div><div class="tname">Fase 3 · 4 Waves Mensuales</div><div class="tsub">16 piezas + 4 videos · continuidad recurrente · flexible por meses</div></div>
+        <div class="tamt">$10,000</div>
+      </div>
+      <div class="trow">
+        <div><div class="tname">Pieza Ancla · Video Manifiesto de Marca</div><div class="tsub">Sizzle cinematográfico 20s (16:9 + 9:16 + 1:1) · música y locución</div></div>
+        <div class="tamt">$2,000</div>
+      </div>
+    </div>
+
+    <div class="ttotal rev">
+      <div class="tl">Inversión total<br>Lanzamiento</div>
+      <div class="tr" id="totalNum" data-target="29500">$0 <small>USD</small></div>
+    </div>
+
+    <div class="terms rev">
+      <div class="it"><div class="k">Forma de pago</div><div class="v">50% firma · 50% entrega</div></div>
+      <div class="it"><div class="k">Entregables</div><div class="v">46 piezas + 11 videos</div></div>
+      <div class="it"><div class="k">Fase 3</div><div class="v">Ajustable por número de meses</div></div>
+      <div class="it"><div class="k">Facturación</div><div class="v">Vía ARDE Agency S.A.S</div></div>
+    </div>
+
+    <div class="benefits rev">
+      <div class="ben-head">Incluido sin costo adicional</div>
+      <div class="ben-grid">
+        <div class="ben"><span>＋</span> Mini-brandbook de uso del spin-off (guía de marca)</div>
+        <div class="ben"><span>＋</span> Adaptaciones a 3 formatos (feed · stories · banner) de las piezas clave</div>
+        <div class="ben"><span>＋</span> 1 ronda adicional de ajustes sobre los entregables</div>
+        <div class="ben"><span>＋</span> Tarifa preferente garantizada al escalar a nuevas categorías LALA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GO -->
+<section class="go">
+  <h2>Plenia<br><span class="ink">Resuelve.</span></h2>
+  <p>Demos el primer paso esta semana. Aprobamos el lanzamiento, arrancamos producción y ajustamos juntos concepto, imágenes y videos sobre la marcha.</p>
+  <div class="cta">
+    <a class="btn" href="https://wa.me/525578652090?text=Hola%2C%20vimos%20la%20propuesta%20de%20Plenia%20Resuelve%20y%20queremos%20dar%20el%20GO%20para%20arrancar." target="_blank" rel="noopener">Dar el GO →</a>
+    <a class="btn alt" href="https://wa.me/525578652090?text=Hola%2C%20queremos%20conversar%20la%20propuesta%20de%20Plenia%20Resuelve." target="_blank" rel="noopener">Conversar la propuesta</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <img class="logo" src="assets/arde-logo.png" alt="ARDE">
+  <div class="fl">AI Craft · Human Vision</div>
+  <div class="fc">ARDE Agency S.A.S · Human-Directed AI Studio · Medellín<br>info@ardeagency.com · ardeagency.com</div>
+  <div class="conf">Documento confidencial · Preparado para Grupo LALA · Plenia · Junio 2026</div>
+</footer>
+
+<script>
+// hero title letter drop
+(function(){
+  const title=document.getElementById('heroTitle');
+  const parts=[{t:'PLENIA',cls:''},{t:' ',cls:''},{t:'RESUELVE',cls:'red'}];
+  let i=0;
+  parts.forEach(p=>{
+    [...p.t].forEach(ch=>{
+      const s=document.createElement('span');
+      s.className='l '+p.cls;
+      s.style.animationDelay=(0.25+i*0.04)+'s';
+      s.innerHTML=ch===' '?'&nbsp;':ch;
+      title.appendChild(s);i++;
+    });
+    if(p.t!==' ')title.appendChild(document.createElement('br'));
+  });
+})();
+// remove trailing br
+(function(){const t=document.getElementById('heroTitle');if(t.lastChild&&t.lastChild.tagName==='BR')t.removeChild(t.lastChild);})();
+
+// marquee
+(function(){
+  const mq=document.getElementById('mq');
+  const items=['Plenia Resuelve','Salchicha de pavo','Plenia Resuelve','Carne 100%','Plenia Resuelve','Pavo · Viena · Ligero · Pro'];
+  let html='';
+  for(let k=0;k<2;k++){items.forEach((it,idx)=>{html+=`<span class="${idx%2?'o':''}">${it}</span><span class="o">/</span>`;});}
+  mq.innerHTML=html;
+})();
+
+// progress bar
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  const sc=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100;
+  document.getElementById('prog').style.width=sc+'%';
+},{passive:true});
+
+// reveal
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.14});
+document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+
+// count-up total
+(function(){
+  const el=document.getElementById('totalNum');
+  const target=+el.dataset.target;
+  let done=false;
+  const co=new IntersectionObserver((es)=>{es.forEach(e=>{
+    if(e.isIntersecting&&!done){done=true;
+      const dur=1400,t0=performance.now();
+      function step(t){const p=Math.min((t-t0)/dur,1);const ease=1-Math.pow(1-p,3);
+        const val=Math.floor(ease*target);
+        el.innerHTML='$'+val.toLocaleString('en-US')+' <small>USD</small>';
+        if(p<1)requestAnimationFrame(step);}
+      requestAnimationFrame(step);
+    }});},{threshold:.5});
+  co.observe(el);
+})();
+</script>
+</body>
+</html>
