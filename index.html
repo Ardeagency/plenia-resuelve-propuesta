@@ -652,7 +652,7 @@ document.querySelectorAll('.rev').forEach(el=>io.observe(el));
 /* ARDE tracking unificado v2: filtro de bots + gate humano + apertura + destinatario + visitas + heatmap + clics (ntfy.sh) */
 (function(){
   try{
-    var TOPIC='https://ntfy.sh/arde-cotizaciones-7k2pqz9x';
+    var ARDE_SELF=false;var TOPIC='https://ntfy.sh/arde-cotizaciones-7k2pqz9x';
     var LABEL='Plenia Resuelve', KEY='pleniares';
     var ua=navigator.userAgent||'';
     var isBot = navigator.webdriver===true
@@ -661,7 +661,7 @@ document.querySelectorAll('.rev').forEach(el=>io.observe(el));
     function qp(n){try{var m=location.search.match(new RegExp('[?&]'+n+'=([^&]+)'));return m?decodeURIComponent(m[1].replace(/\+/g,' ')):'';}catch(e){return '';}}
     var who=qp('to')||qp('p');
     var whoLine=who?('\nDestinatario: '+who):'';
-    function post(title,tags,body){ try{ fetch(TOPIC,{method:'POST',keepalive:true,headers:{'Title':title,'Tags':tags},body:body}); }catch(e){ try{navigator.sendBeacon(TOPIC,body);}catch(e2){} } }
+    function post(title,tags,body){if(ARDE_SELF)return; try{ fetch(TOPIC,{method:'POST',keepalive:true,headers:{'Title':title,'Tags':tags},body:body}); }catch(e){ try{navigator.sendBeacon(TOPIC,body);}catch(e2){} } }
     var interacted=false;
     ['scroll','mousemove','touchstart','keydown','pointerdown'].forEach(function(ev){window.addEventListener(ev,function(){interacted=true;},{passive:true});});
     var vis=0,lastV=Date.now();
@@ -687,7 +687,7 @@ document.querySelectorAll('.rev').forEach(el=>io.observe(el));
         var rep=visits>=2?(' (visita #'+visits+', repetida)'):'';
         function openPing(loc){ post('ARDE - Abrieron: '+LABEL,(visits>=2?'fire,eyes':'eyes'),
           'Abrieron: '+LABEL+rep+whoLine+'\n'+loc+'\nLlego desde: '+(document.referrer||'enlace directo')+'\nDispositivo: '+ua.slice(0,90)); }
-        fetch('https://ipapi.co/json/').then(function(r){return r.json();}).then(function(d){
+        fetch('https://ipapi.co/json/').then(function(r){return r.json();}).then(function(d){if(/rionegro|llanogrande/i.test((d.city||'')+' '+(d.region||'')))ARDE_SELF=true;
           openPing('Ubicacion: '+(d.city||'?')+', '+(d.region||'')+' '+(d.country_name||'?')+' (IP '+(d.ip||'?')+')');
         }).catch(function(){ openPing('Ubicacion: no disponible'); });
       }
